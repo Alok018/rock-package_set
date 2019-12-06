@@ -227,10 +227,11 @@ version_control:
         branch: $ROCK_BRANCH
 
     - drivers/aria:
-        type: archive
-        url: http://robots.mobilerobots.com/ARIA/download/archives/ARIA-2.7.5+gcc4.3.tgz
-        update_cached_file: false
-        patches: $AUTOPROJ_SOURCE_DIR/patches/aria_pc.patch
+        type: git 
+        url: https://github.com/amor-ros-pkg/libaria/tree/debian/2.7.5.2+repack-3.git
+        tag: 2.7.5.2
+        patches:
+            - $AUTOPROJ_SOURCE_DIR/patches/aria_pc.patch
 
     - drivers/phidgets:
         type: archive
